@@ -1,0 +1,32 @@
+# SQL
+SQL Portfolio 
+
+
+CREATE TABLE groceries (ID INTEGER PRIMARY KEY, item TEXT, brand TEXT, inventory INTEGER, cost INTEGER);
+
+INSERT INTO groceries VALUES (1, "bread", "sunbeam", 45, 2.45);
+INSERT INTO groceries VALUES (2, "pasta sauce", "ragu", 30, 2);
+INSERT INTO groceries VALUES (3, "pasta", "bertolli", 50, 1.20);
+INSERT INTO groceries VALUES (4, "lunch meat", "oscar_myer", 20, 5);
+INSERT INTO groceries VALUES (5, "cheese", "kraft", 28, 2.50);
+INSERT INTO groceries VALUES (6, "frozen meals", "stouffers", 39, 7);
+INSERT INTO groceries VALUES (7, "eggs", "eggland's_best", 10, 3);
+INSERT INTO groceries VALUES (8, "french fries", "red_robin", 7, 4);
+INSERT INTO groceries VALUES (9, "coffee", "starbucks", 14, 15);
+INSERT INTO groceries VALUES (10, "coffee creamer", "coffee_mate", 7, 6.98);
+INSERT INTO groceries VALUES (11, "canned meat", "spam", 10, 3.78);
+INSERT INTO groceries VALUES (12, "canned vegetables", "green_giant", 11, .98);
+INSERT INTO groceries VALUES (13, "juice", "motts", 5, 4.98);
+INSERT INTO groceries VALUES (14, "soda", "pepsi", 14, 2.37);
+INSERT INTO groceries VALUES (15, "chips", "frito_lay", 27, 2.98);
+
+
+
+-To organize brands alphabetically 
+SELECT * FROM groceries ORDER BY cost asc;
+
+-To get the sum of all the inventory 
+SELECT sum(inventory) FROM groceries;
+
+-To see what you have the most of in yout iventory
+SELECT max(inventory) from groceries;
